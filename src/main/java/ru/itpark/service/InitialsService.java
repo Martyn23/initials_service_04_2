@@ -5,7 +5,7 @@ public class InitialsService {
 
         String parts[] = name.split(" ");
 
-        if (parts.length > 1) {
+        if (parts.length >= 2) {
             return parts[0].substring(0, 1).toUpperCase()+parts[parts.length-1].substring(0,1).toUpperCase();
         }
 
