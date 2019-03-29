@@ -4,12 +4,12 @@ public class InitialsService {
     public String getInitials(String name) {
 
         String parts[] = name.split(" ");
-
-        if (parts.length >= 2) {
-            return parts[0].substring(0, 1).toUpperCase()+parts[parts.length-1].substring(0,1).toUpperCase();
+        String initials = parts[0].substring(0, 1).toUpperCase();
+        if (parts.length > 1) {
+            initials = parts[0].substring(0, 1).toUpperCase()+parts[parts.length-1].substring(0,1).toUpperCase();
         }
 
-        return parts[0].substring(0, 1).toUpperCase();
+        return initials;
 
 
 
